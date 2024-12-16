@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Widget, Widgets } from './schema/Widget'
+import { Widgets } from './schema/Widget'
+import { useWidgetStore } from './stores/widgetStore'
 import axios from 'axios'
 
-const widgets = ref<Widget[]>([])
+const widgetStore = useWidgetStore()
+const widgets = ref(widgetStore.widgets)
 
 /**
  * Fetch widgets from the API
