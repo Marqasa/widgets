@@ -9,10 +9,10 @@ export function getForegroundColor(color: WidgetColor): string {
   switch (color) {
     case 'white':
     case 'beige':
-      return '#3B755F'
+      return 'var(--gs-color-green)'
     case 'black':
     case 'green':
     case 'blue':
-      return '#F9F9F9'
+      return 'var(--gs-color-grey)'
   }
 }

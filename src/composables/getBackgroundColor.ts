@@ -8,14 +8,14 @@ import type { WidgetColor } from '@/schema/Widget'
 export function getBackgroundColor(color: WidgetColor): string {
   switch (color) {
     case 'white':
-      return '#FFFFFF'
+      return 'var(--gs-color-white)'
     case 'black':
-      return '#212121'
+      return 'var(--gs-color-black)'
     case 'beige':
-      return '#F2EBDB'
+      return 'var(--gs-color-beige)'
     case 'green':
-      return '#3B755F'
+      return 'var(--gs-color-green)'
     case 'blue':
-      return '#2E3A8C'
+      return 'var(--gs-color-blue)'
   }
 }

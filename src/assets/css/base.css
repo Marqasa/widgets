@@ -1,3 +1,12 @@
+:root {
+  --gs-color-white: #ffffff;
+  --gs-color-grey: #f9f9f9;
+  --gs-color-black: #212121;
+  --gs-color-beige: #f2ebdb;
+  --gs-color-green: #3b755f;
+  --gs-color-blue: #2e3a8c;
+}
+
 * {
   margin: 0;
   padding: 0;
