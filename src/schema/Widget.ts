@@ -16,6 +16,8 @@ export const Widget = z.object({
   type: WidgetType,
 })
 
+export const UpdateWidgetData = Widget.omit({ id: true }).partial()
+
 export const Widgets = z.array(Widget)
 
 export type WidgetType = z.infer<typeof Widget>
@@ -27,3 +29,5 @@ export type WidgetColor = z.infer<typeof WidgetColor>
 export type Widget = z.infer<typeof Widget>
 
 export type Widgets = z.infer<typeof Widgets>
+
+export type UpdateWidgetData = z.infer<typeof UpdateWidgetData>
