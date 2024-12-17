@@ -12,10 +12,9 @@ const model = defineModel({ type: Boolean, required: true })
 
 <style>
 .gs-checkbox {
-  --gs-checkbox-duration: 200ms;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 .gs-checkbox-input {
@@ -25,7 +24,7 @@ const model = defineModel({ type: Boolean, required: true })
   border: 3px solid var(--gs-color-black);
   border-radius: 4px;
   cursor: pointer;
-  transition: all var(--gs-checkbox-duration);
+  transition: all var(--gs-duration-s);
 }
 
 .gs-checkbox-checked .gs-checkbox-input {
@@ -41,7 +40,7 @@ const model = defineModel({ type: Boolean, required: true })
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
-  transition: all var(--gs-checkbox-duration);
+  transition: all var(--gs-duration-s);
 }
 
 .gs-checkbox-icon {
