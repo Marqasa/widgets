@@ -72,12 +72,14 @@ const foregroundColor = computed(() => getForegroundColor(props.widget.selectedC
   border-radius: 6px;
   gap: 12px;
   min-width: 250px;
+  transition: all var(--gs-duration-s);
 }
 
 .gs-widget-header-icon {
   width: 41px;
   height: 46px;
   fill: v-bind('foregroundColor');
+  transition: all var(--gs-duration-s);
 }
 
 .gs-widget-header-content {
@@ -89,6 +91,7 @@ const foregroundColor = computed(() => getForegroundColor(props.widget.selectedC
 .gs-widget-header-title,
 .gs-widget-header-subtitle {
   color: v-bind('foregroundColor');
+  transition: all var(--gs-duration-s);
 }
 
 .gs-widget-header-title {
