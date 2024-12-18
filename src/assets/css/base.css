@@ -9,6 +9,7 @@
   --gs-color-blue: #2e3a8c;
 
   --gs-duration-s: 200ms;
+  --gs-duration-m: 300ms;
 }
 
 * {
