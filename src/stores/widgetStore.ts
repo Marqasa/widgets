@@ -24,6 +24,13 @@ export const useWidgetStore = defineStore('widgets', () => {
     if (!widget) return
 
     Object.assign(widget, data)
+
+    // If the widget is active, deactivate all other widgets
+    if (data.active) {
+      widgets.value.forEach((w) => {
+        if (w.id !== id) w.active = false
+      })
+    }
   }
 
   return { widgets, setWidgets, updateWidget }
