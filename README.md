@@ -10,6 +10,12 @@ This project is a Vue 3 application that displays a list of widgets fetched from
 - Use of Pinia for state management
 - Type-safe schema validation with Zod
 
+## Live Demo
+
+You can view a live demo of the application at the following URL:
+
+[Live Demo](https://marqasa.github.io/widgets/)
+
 ## Project Structure
 
 - `src/`: Contains the application's source code
