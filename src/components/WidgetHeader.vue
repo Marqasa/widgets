@@ -102,4 +102,10 @@ const foregroundColor = computed(() => getForegroundColor(props.widget.selectedC
 .gs-widget-header-subtitle {
   font-size: 12px;
 }
+
+@media (max-width: 1024px) {
+  .gs-widget-header {
+    min-width: unset;
+  }
+}
 </style>
