@@ -74,4 +74,10 @@
 .gs-info-link:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 512px) {
+  .gs-info-tooltip {
+    max-width: 200px;
+  }
+}
 </style>
