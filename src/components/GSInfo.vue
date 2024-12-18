@@ -16,7 +16,12 @@
         with your customers. Turn it off here if you do not want the badge to link to it.
       </p>
 
-      <a class="gs-info-link" href="#">View Public Profile</a>
+      <a
+        class="gs-info-link"
+        href="https://public.getgreenspark.com/1621406275611123/lenny-leemann/"
+        target="_blank"
+        >View Public Profile</a
+      >
     </div>
   </div>
 </template>
