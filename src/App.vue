@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { PRODUCT_WIDGETS } from '@/assets/data/product-widgets'
 import { useWidgetStore } from './stores/widgetStore'
 import { Widgets } from './schema/Widget'
 import axios from 'axios'
@@ -12,16 +13,18 @@ const widgets = computed(() => widgetStore.widgets)
  * Fetch widgets from the API
  */
 async function fetchWidgets() {
-  const response = await axios.get(
-    'https://b795b019-1f84-41f4-93a3-a702d686c75a.mock.pstmn.io/product-widgets',
-  )
+  const dataURL = import.meta.env.VITE_DATA_URL
 
-  // Check if the response data is valid according to the Widgets schema
-  if (Widgets.safeParse(response.data).success) {
-    widgetStore.setWidgets(response.data)
-  } else {
-    console.error('Failed to parse widgets')
+  if (dataURL) {
+    const response = await axios.get(dataURL)
+
+    if (Widgets.safeParse(response.data).success) {
+      widgetStore.setWidgets(response.data)
+      return
+    }
   }
+
+  widgetStore.setWidgets(PRODUCT_WIDGETS)
 }
 
 fetchWidgets()
